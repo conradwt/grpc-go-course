@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package greet;
+
+option go_package = "github.com/conradwt/grpc-go-course/greet/proto";
+
+message GreetRequest {
+  string first_name = 1;
+}
+
+message GreeResponse {
+  string result = 1;
+}
+
+service GreetService {
+  rpc Greet(GreetRequest) returns (GreeResponse);
+}
