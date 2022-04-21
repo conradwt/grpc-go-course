@@ -7,9 +7,11 @@ option go_package = "github.com/conradwt/grpc-go-course/calculator/proto";
 import "sum.proto";
 import "primes.proto";
 import "avg.proto";
+import "max.proto";
 
 service CalculatorService {
   rpc Sum(SumRequest) returns (SumResponse);
   rpc Primes(PrimeRequest) returns (stream PrimeResponse);
   rpc Avg(stream AvgRequest) returns (AvgResponse);
+  rpc Max(stream MaxRequest) returns (stream MaxResponse);
 }
